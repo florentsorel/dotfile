@@ -1,0 +1,110 @@
+[theme]
+name = "nord-dark"
+[theme.overrides]
+idle_bg = "#292d3e"
+idle_fg = "#d0d0d0"
+info_bg = "#82aaff"
+info_fg = "#292d3e"
+good_bg = "#bffcb6"
+good_fg = "#292d3e"
+warning_bg = "#F78C6C"
+warning_fg = "#292d3e"
+critical_bg = "#f07178"
+critical_fg = "#292d3e"
+separator = "\ue0b2"
+separator_bg = "auto"
+separator_fg = "auto"
+alternating_tint_bg = "#000000"
+alternating_tint_fg = "#000000"
+
+[icons]
+name = "awesome"
+[icons.overrides]
+music = ""
+
+[[block]]
+block = "focused_window"
+max_width = 30
+show_marks = "visible"
+
+[[block]]
+block = "music"
+player = "spotify"
+buttons = ["prev", "play", "next"]
+on_collapsed_click = "spotify"
+hide_when_empty = true
+marquee = false
+max_width = 30
+dynamic_width = true
+[block.theme_overrides]
+info_bg = "#1DB954"
+info_fg = "#191414"
+idle_bg = "#292d3e"
+idle_fg = "#d0d0d0"
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+[block.theme_overrides]
+idle_bg = "#32374D"
+idle_fg = "#ffffff"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
+[block.theme_overrides]
+idle_bg = "#444267"
+idle_fg = "#abcdef"
+
+[[block]]
+block = "cpu"
+interval = 1
+info = 40
+warning = 60
+critical = 90
+[block.theme_overrides]
+idle_bg = "#676E95"
+idle_fg = "#abcdef"
+
+#[[block]]
+#block = "load"
+#interval = 1
+#format = "{1m}"
+
+[[block]]
+block = "sound"
+[block.theme_overrides]
+idle_bg = "#8796B0"
+idle_fg = "#ffffff"
+warning_bg = "#F78C6C"
+warning_fg = "#FFFFFF"
+
+[[block]]
+block = "battery"
+driver = "upower"
+interval = 10
+format = "{percentage} {time}"
+good = 90
+info = 60
+warning = 30
+critical = 10
+[block.theme_overrides]
+good_bg = "#C3E88D"
+idle_bg = "#959DCB"
+info_bg = "#82AAFF"
+warning_bg = "#FFCB6B"
+critical_bg = "#F07178"
+
+[[block]]
+block = "time"
+interval = 5
+format = "%a %d/%m %R"
+on_click = "if pgrep zenity; then pkill zenity; fi; zenity --calendar"
