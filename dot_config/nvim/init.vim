@@ -9,13 +9,19 @@ endif
 set termguicolors
 
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml', { 'branch': 'main' }
@@ -77,8 +83,12 @@ nmap m $
 "----------tagbar----------
 nmap <F8> :TagbarToggle<CR>
 
-"---------CtrlP-----------
+"---------Telescope-----------
 set wildignore+=*/tmp/*,*/vendor/*,*.so,*.swp,*.zip
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "----------Coc Explorer----------
 nmap <F3> :CocCommand explorer<CR>
