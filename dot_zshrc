@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/florent/.oh-my-zsh"
+export BROWSER=/usr/bin/google-chrome-stable
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
