@@ -1,0 +1,8 @@
+require('modules.plugins.packer')
+require('modules.plugins.statusbar')
+require('modules.plugins.gitsigns')
+require('modules.plugins.nvimtree')
+require('modules.plugins.colorizer')
+require('modules.plugins.treesitter')
+require('modules.plugins.autopair')
+require('modules.plugins.formatter')
