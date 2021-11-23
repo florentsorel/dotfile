@@ -5,6 +5,10 @@ vim.g.mapleader = ','
 --- Quick file save
 u.map('n', '<leader>ss', '<cmd>w<cr>')
 
+-- keep visual mode after indent
+u.vmap('>', '>gv')
+u.vmap('<', '<gv')
+
 --- Move current line up/down
 u.vmap('<A-j>', ":m '>+1<CR>gv=gv")
 u.vmap('<A-k>', ":m '<-2<CR>gv=gv")
