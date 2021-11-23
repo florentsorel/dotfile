@@ -3,4 +3,5 @@ require('colorizer').setup({
     'scss',
     'html',
     'javascript',
+    'toml',
 })

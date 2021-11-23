@@ -1,16 +1,16 @@
 [theme]
 name = "nord-dark"
 [theme.overrides]
-idle_bg = "#292d3e"
-idle_fg = "#d0d0d0"
+idle_bg = "#282A36"
+idle_fg = "#F8F8F2"
 info_bg = "#82aaff"
 info_fg = "#292d3e"
-good_bg = "#bffcb6"
-good_fg = "#292d3e"
-warning_bg = "#F78C6C"
-warning_fg = "#292d3e"
-critical_bg = "#f07178"
-critical_fg = "#292d3e"
+good_bg = "#69FF94"
+good_fg = "#282A36"
+warning_bg = "#FFB86C"
+warning_fg = "#282A36"
+critical_bg = "#FF6E6E"
+critical_fg = "#282A36"
 separator = "\ue0b2"
 separator_bg = "auto"
 separator_fg = "auto"
@@ -39,8 +39,8 @@ dynamic_width = true
 [block.theme_overrides]
 info_bg = "#1DB954"
 info_fg = "#191414"
-idle_bg = "#292d3e"
-idle_fg = "#d0d0d0"
+idle_bg = "#282A36"
+idle_fg = "#F8F8F2"
 
 [[block]]
 block = "disk_space"
@@ -52,7 +52,7 @@ interval = 20
 warning = 20.0
 alert = 10.0
 [block.theme_overrides]
-idle_bg = "#32374D"
+idle_bg = "#4B5263"
 idle_fg = "#ffffff"
 
 [[block]]
@@ -61,8 +61,8 @@ display_type = "memory"
 format_mem = "{mem_used_percents}"
 format_swap = "{swap_used_percents}"
 [block.theme_overrides]
-idle_bg = "#444267"
-idle_fg = "#abcdef"
+idle_bg = "#3E4452"
+idle_fg = "#FFFFFF"
 
 [[block]]
 block = "cpu"
@@ -71,8 +71,8 @@ info = 40
 warning = 60
 critical = 90
 [block.theme_overrides]
-idle_bg = "#676E95"
-idle_fg = "#abcdef"
+idle_bg = "#3B4048"
+idle_fg = "#ffffff"
 
 #[[block]]
 #block = "load"
@@ -82,9 +82,9 @@ idle_fg = "#abcdef"
 [[block]]
 block = "sound"
 [block.theme_overrides]
-idle_bg = "#8796B0"
+idle_bg = "#44475A"
 idle_fg = "#ffffff"
-warning_bg = "#F78C6C"
+warning_bg = "#FFB86C"
 warning_fg = "#FFFFFF"
 
 [[block]]
@@ -97,11 +97,11 @@ info = 60
 warning = 30
 critical = 10
 [block.theme_overrides]
-good_bg = "#C3E88D"
-idle_bg = "#959DCB"
-info_bg = "#82AAFF"
-warning_bg = "#FFCB6B"
-critical_bg = "#F07178"
+good_bg = "#69FF94"
+idle_bg = "#A4FFFF"
+info_bg = "#82aaff"
+warning_bg = "#FFB86C"
+critical_bg = "#FF6E6E"
 
 [[block]]
 block = "time"
