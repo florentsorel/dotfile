@@ -48,6 +48,9 @@ o.cmdheight = 1
 o.termguicolors = true
 o.syntax = 'enable'
 w.colorcolumn = '120'
+vim.cmd([[
+    :hi ColorColumn guibg=lightmagenta
+]])
 
 vim.cmd([[
     filetype indent plugin on
