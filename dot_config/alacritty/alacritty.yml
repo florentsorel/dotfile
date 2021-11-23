@@ -1,0 +1,31 @@
+import:
+  - ~/.config/alacritty/themes/dracula.yml
+
+window:
+  padding:
+    x: 15
+    y: 15
+
+font:
+  size: 11
+  normal:
+    family: MonoLisa
+    style: Regular
+
+  bold:
+    family: MonoLisa
+    style: Bold
+
+  italic:
+    family: MonoLisa
+    style: Italic
+
+selection:
+  save_to_clipboard: true
+
+mouse_bindings:
+  - {mouse: Middle, action: PasteSelection}
+
+cursor:
+  style: Underline
+  unfocused_hollow: true
