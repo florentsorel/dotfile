@@ -13,6 +13,8 @@ require('packer').startup(function()
         'nvim-lua/popup.nvim',
     })
 
+    use 'mattn/emmet-vim'
+
     -- Golang
     use({
         'fatih/vim-go',
