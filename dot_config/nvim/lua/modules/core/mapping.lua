@@ -33,7 +33,7 @@ u.nmap('<C-S-Down>', ':resize -1<CR>')
 -- u.nmap('<C-t><Right>', ':tabn<CR>')
 
 -- Telescope
-u.nmap('<Leader>ff', [[<cmd>lua require('telescope.builtin').find_files()<CR>]])
+u.nmap('<Leader>ff', [[<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>]])
 u.nmap('<Leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
 u.nmap('<Leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
 u.nmap('<Leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]])
