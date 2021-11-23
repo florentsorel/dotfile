@@ -47,7 +47,6 @@ o.backup = false
 o.cmdheight = 1
 o.termguicolors = true
 o.syntax = 'enable'
-w.colorcolumn = '120'
 
 vim.cmd([[
     filetype indent plugin on
