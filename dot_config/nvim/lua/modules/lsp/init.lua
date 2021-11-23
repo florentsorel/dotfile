@@ -3,6 +3,17 @@ local nvim_lsp = require 'lspconfig'
 local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+    -- signature
+    require('lsp_signature').on_attach({
+        bind = true,
+        handler_opts = {
+            border = 'rounded',
+            virtual_text_pos = 'eol',
+        },
+        floating_window_above_cur_line = true,
+        zindex = 50,
+    })
+
   local opts = { noremap = true, silent = true }
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -27,10 +38,11 @@ end
 
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-local servers = { 'intelephense', 'tailwindcss', 'cssls', 'html', 'tsserver', 'gopls', 'rust_analyzer', 'jsonls', 'yamlls', }
+local servers = { 'intelephense', 'cssls', 'html', 'tsserver', 'gopls', 'rust_analyzer', }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -39,47 +51,6 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Configure each LSP here
---Enable (broadcasting) snippet capability for completion
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
--- php
-require('lspconfig').intelephense.setup({
-    on_attach = function(client, bufnr)
-        require "lsp_signature".on_attach()
-    end,
-})
-
--- html
-require('lspconfig').html.setup({
-    capabilities = capabilities,
-})
-
--- css
-require('lspconfig').cssls.setup({
-    capabilities = capabilities,
-})
-
--- Typescript
-require('lspconfig').tsserver.setup({
-    on_attach = function(client, bufnr)
-        require "lsp_signature".on_attach()
-    end,
-})
-
--- Golang
-require('lspconfig').gopls.setup({
-    on_attach = function(client, bufnr)
-        require "lsp_signature".on_attach()
-    end,
-})
-
--- rust
-require('lspconfig').rust_analyzer.setup({
-    on_attach = function(client, bufnr)
-        require "lsp_signature".on_attach()
-    end,
-})
 
 -- tailwind
 require('lspconfig').tailwindcss.setup({})

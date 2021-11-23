@@ -89,6 +89,7 @@ require('packer').startup(function()
     -- Telescope
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim' } }
     use 'nvim-telescope/telescope-fzf-native.nvim'
+    use {'stevearc/aerial.nvim'}
 
     -- Theme
     use({
