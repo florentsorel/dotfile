@@ -34,6 +34,7 @@ require('packer').startup(function()
     -- Lsp
     use({
         'neovim/nvim-lspconfig',
+        'williamboman/nvim-lsp-installer',
         'ray-x/lsp_signature.nvim',
         'jose-elias-alvarez/nvim-lsp-ts-utils',
         'jose-elias-alvarez/null-ls.nvim',
@@ -111,8 +112,5 @@ require('packer').startup(function()
     use 'arkav/lualine-lsp-progress' -- Integration with progress notifications
 
     -- i3 support
-    use({
-        'mboughaba/i3config.vim',
-        config = function() require('i3config').setup() end
-    })
+    use 'mboughaba/i3config.vim'
 end)
