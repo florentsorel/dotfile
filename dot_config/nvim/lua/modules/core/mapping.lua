@@ -44,7 +44,7 @@ u.nmap('<Leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]])
 
 --- Phpcbf - Php-cs-fixer
 u.nmap('<Leader>FB', '<cmd>!phpcbf %<CR>') -- Beautify
-u.nmap('<Leader>FF', '<cmd>!php-cs-fixer --rules=@PSR12 --using-cache=no fix %<CR>')
+u.nmap('<Leader>FF', '<cmd>!php-cs-fixer --rules=@PSR12,@Symfony --using-cache=no fix %<CR>')
 
 -- Open nvim config file
 u.nmap('<Leader>ev', ':tabedit ~/.config/nvim/init.lua<CR>')

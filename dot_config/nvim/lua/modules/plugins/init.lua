@@ -1,3 +1,4 @@
+require('modules.plugins.compe')
 require('modules.plugins.packer')
 require('modules.plugins.statusbar')
 require('modules.plugins.gitsigns')
