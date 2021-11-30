@@ -50,8 +50,3 @@ require('nvim-tree').setup({
         ignore_list = {},
     },
 })
-
-local u = require('utils')
-
-u.map('n', '<F3>', [[<cmd>lua require('nvim-tree').toggle()<cr>]])
-u.map('n', '<leader>tr', [[<cmd>lua require('nvim-tree').refresh()<cr>]])
