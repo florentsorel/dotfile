@@ -2,6 +2,8 @@ local u = require('utils')
 
 vim.g.mapleader = ','
 
+u.imap('jj', '<ESC>')
+
 --- Quick file save
 u.map('n', '<leader>ss', '<cmd>w<cr>')
 
