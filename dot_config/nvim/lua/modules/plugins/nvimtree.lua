@@ -1,7 +1,4 @@
 -- https://github.com/kyazdani42/nvim-tree.lua
-
-local g = vim.g
-
 vim.cmd([[
     let g:nvim_tree_quit_on_open = 1
     let g:nvim_tree_indent_markers = 0
