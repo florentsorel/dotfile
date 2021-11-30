@@ -47,6 +47,9 @@ o.backup = false
 o.cmdheight = 1
 o.termguicolors = true
 o.syntax = 'enable'
+o.foldmethod = 'expr'
+o.foldlevel = 2
+o.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.cmd([[
     filetype indent plugin on
