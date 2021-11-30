@@ -21,6 +21,10 @@ require('packer').startup(function()
         run = ':GoUpdateBinaries'
     })
 
+    -- Rust
+    use 'rust-lang/rust.vim'
+    
+
     -- Treesitter
     use({
         'nvim-treesitter/nvim-treesitter',
