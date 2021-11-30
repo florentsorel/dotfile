@@ -41,15 +41,5 @@ u.nmap('<C-S-Down>', ':resize -1<CR>')
 -- u.nmap('<C-t><Left>', ':tabp<CR>')
 -- u.nmap('<C-t><Right>', ':tabn<CR>')
 
--- Telescope
-u.nmap('<Leader>ff', [[<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>]])
-u.nmap('<Leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
-u.nmap('<Leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
-u.nmap('<Leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]])
-
---- Phpcbf - Php-cs-fixer
-u.nmap('<Leader>FB', '<cmd>!phpcbf %<CR>') -- Beautify
-u.nmap('<Leader>FF', '<cmd>!php-cs-fixer --rules=@PSR12,@Symfony --using-cache=no fix %<CR>')
-
 -- Open nvim config file
 u.nmap('<Leader>ev', ':tabedit ~/.config/nvim/init.lua<CR>')
