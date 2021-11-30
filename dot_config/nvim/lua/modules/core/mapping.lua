@@ -16,6 +16,9 @@ u.vmap('<A-k>', ":m '<-2<CR>gv=gv")
 -- Copy text to clipboard
 u.vmap('<C-c>', '"+y')
 
+-- Select all
+u.nmap('<C-a>', 'ggVG')
+
 --
 u.nmap('<Leader><Space>', ':nohlsearch<CR>')
 
