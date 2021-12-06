@@ -7,6 +7,19 @@ require('lspconfig').rust_analyzer.setup{
         client.resolved_capabilities.document_formatting = false
         client.resolved_capabilities.document_range_formatting = false
     end,
-    capabilities = config.capabilities,
+    settings = {
+        ['rust-analyzer'] = {
+            assist = {
+                importGranularity = 'module',
+                importPrefix = 'by_self',
+            },
+            cargo = {
+                loadOutDirsFromCheck = true,
+            },
+            procMacro = {
+                enable = true,
+            },
+        },
+    },
 }
 
