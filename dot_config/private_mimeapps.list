@@ -21,6 +21,7 @@ x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/gitkraken=GitKraken.desktop
 x-scheme-handler/postman=Postman.desktop
 application/json=visual-studio-code.desktop
+x-scheme-handler/msteams=teams.desktop
 
 [Added Associations]
 x-scheme-handler/http=google-chrome.desktop;
