@@ -23,6 +23,8 @@ require('packer').startup(function()
     -- Rust
     use 'rust-lang/rust.vim'
     
+    -- SQL
+    use 'nanotee/sqls.nvim'
 
     -- Treesitter
     use({

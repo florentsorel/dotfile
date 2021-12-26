@@ -5,6 +5,7 @@ require("modules.lsp.tailwind")
 require("modules.lsp.typescript")
 require("modules.lsp.go")
 require("modules.lsp.rust")
+require("modules.lsp.sql")
 
 require("modules.lsp.json")
 require("modules.lsp.yaml")
