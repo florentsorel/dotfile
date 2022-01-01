@@ -12,5 +12,17 @@ require('telescope').setup{
             "vendor",
             "./vendor",
         },
+    },
+    pickers = {
+        find_files = {
+            find_command = {
+                "fd",
+                "--type",
+                "f",
+                "--strip-cwd-prefix",
+                "--no-ignore",
+                "--hidden",
+            }
+        }
     }
 }
