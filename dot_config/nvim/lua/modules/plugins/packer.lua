@@ -80,14 +80,6 @@ require('packer').startup(function()
         config = [[require('modules.plugins.colorizer')]],
     })
 
-    --- Format/Lint
-    use({
-        'mhartington/formatter.nvim',
-        config = function()
-            require('modules.plugins.formatter')
-        end,
-    })
-
     -- Snippets
     use({
         'L3MON4D3/luasnip',
