@@ -43,10 +43,6 @@ require('packer').startup(function()
         'ray-x/lsp_signature.nvim',
         'jose-elias-alvarez/nvim-lsp-ts-utils',
         'jose-elias-alvarez/null-ls.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim',
-            'neovim/nvim-lspconfig',
-        },
     })
 
     -- Completion

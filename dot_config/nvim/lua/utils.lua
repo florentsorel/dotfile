@@ -26,4 +26,8 @@ M.imap = function(...)
     M.map('i', ...)
 end
 
+M.buf_map = function(bufnr, mode, target, source, opts)
+    api.nvim_buf_set_keymap(bufnr or 0, mode, target, source, get_map_options(opts))
+end
+
 return M

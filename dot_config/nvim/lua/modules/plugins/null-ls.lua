@@ -7,7 +7,7 @@ local sources = {
     formatting.prettier,
     formatting.trim_whitespace,
     formatting.phpcsfixer.with({
-        args = { '--no-interaction', '--quiet', '--rules=@PSR12,@Symfony', 'fix', '$FILENAME' },
+        args = { '--no-interaction', '--using-cache=no', '--quiet', '--rules=@PSR12,@Symfony', 'fix', '$FILENAME' },
     }),
 
     diagnostics.php,
