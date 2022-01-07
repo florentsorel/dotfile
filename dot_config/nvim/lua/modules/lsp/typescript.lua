@@ -5,10 +5,13 @@ local lspconfig = require('lspconfig')
 require('lspconfig').tsserver.setup{
     root_dir = lspconfig.util.root_pattern('package.json'),
     init_options = require('nvim-lsp-ts-utils').init_options,
-    on_attach = function(client, bufnr)     
+    on_attach = function(client, bufnr)
         local ts_utils = require('nvim-lsp-ts-utils')
 
         config.on_attach()
+
+        client.resolved_capabilities.document_formatting = false
+        client.resolved_capabilities.document_range_formatting = false
 
         -- defaults
         ts_utils.setup({
