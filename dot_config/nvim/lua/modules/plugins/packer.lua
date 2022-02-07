@@ -21,8 +21,8 @@ require('packer').startup(function()
     })
 
     -- Rust
-    use 'rust-lang/rust.vim'
-    
+    use('simrat39/rust-tools.nvim')
+
     -- SQL
     use 'nanotee/sqls.nvim'
 
@@ -92,7 +92,6 @@ require('packer').startup(function()
     -- Theme
     use({
         'Mofiqul/dracula.nvim',
-        'marko-cerovac/material.nvim',
         'kyazdani42/nvim-web-devicons',
     })
 
