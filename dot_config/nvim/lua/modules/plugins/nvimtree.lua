@@ -1,13 +1,11 @@
 -- https://github.com/kyazdani42/nvim-tree.lua
 vim.cmd([[
-    let g:nvim_tree_quit_on_open = 1
     let g:nvim_tree_indent_markers = 0
     let g:nvim_tree_git_hl = 1
     let g:nvim_tree_highlight_opened_files = 0
     let g:nvim_tree_root_folder_modifier = ':~'
     let g:nvim_tree_add_trailing = 1
     let g:nvim_tree_group_empty = 1
-    let g:nvim_tree_disable_window_picker = 0
     let g:nvim_tree_icon_padding = ' '
     let g:nvim_tree_symlink_arrow = ' ➛ '
     let g:nvim_tree_respect_buf_cwd = 0
@@ -25,4 +23,12 @@ require('nvim-tree').setup({
         update_cwd = false,
         ignore_list = {},
     },
+    actions = {
+        open_file = {
+            quit_on_open = true,
+            window_picker = {
+                enable = false,
+            }
+        }
+    }
 })
