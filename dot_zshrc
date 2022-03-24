@@ -11,6 +11,8 @@ export BROWSER=/usr/bin/google-chrome-stable
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
+export VIMRUNTIME="/usr/share/nvim/runtime"
+
 EDITOR=nvim
 TERMINAL=/usr/bin/alacritty
 XDG_CONFIG_HOME=/home/florent/.config
